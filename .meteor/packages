@@ -8,14 +8,12 @@ aldeed:simple-schema
 
 
 iron:router
-meteorhacks:kadira
 datariot:ganalytics
 mrt:flash-messages
-http
+http@1.4.0
 jparker:crypto-md5
 peerlibrary:urlify2
 mrt:bootswatch-yeti
-meteorhacks:npm
 
 
 pfafman:filesaver
@@ -30,7 +28,13 @@ raix:handlebar-helpers
 gadicohen:sitemaps
 
 
-npm-container
 aldeed:autoform
-standard-minifiers
 appshore:recaptcha
+meteorhacks:npm
+
+
+npm-container
+standard-minifier-css
+standard-minifier-js
+shell-server
+dynamic-import
