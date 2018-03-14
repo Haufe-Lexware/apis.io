@@ -83,7 +83,10 @@ Meteor.methods({
           // WORKS
           console.log("APIS",api.apis);
           for (var i = 0; i < api.apis.length; i++) {
-            var api_k = Meteor.call('createUpdateAPI',api.apis[i],url);
+            // In "ping" (see above), ALL APIs defined by the apis.json file from url have been REMOVED.
+            // The records for APIs have to be CREATED (NOT updated)
+            // var api_k = Meteor.call('createUpdateAPI', api.apis[i], url);
+            var api_k = Meteor.call('createAPI', api.apis[i], url);
           };
   		});
   	},
