@@ -165,9 +165,9 @@ Meteor.methods({
             if(_.isArray(invalidKeys)){
               //if multiple keys are invalid,
               var err = _.map(invalidKeys,function(k){
-                if(k.type ="keyNotInSchema")
+              if (k.type == "keyNotInSchema")
                   return k.message.replace(/null/,k.name); //FIXME in autoform ?
-                if(k.type = "notUnique")
+              if (k.type == "notUnique")
                   return ""
                 return k.message
               });
