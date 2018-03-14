@@ -3,6 +3,12 @@ APIcontroller = RouteController.extend({
         //FIXME better way of doing this?
 
         var next = this.next
+
+        if (!Meteor.settings.private.threeScale) {
+            next();
+		    return;
+		}
+
         var metric = {}
         metric["name"] =this.options.route.getName().replace(/api./,'').replace('.','_')
 

@@ -187,6 +187,9 @@ Meteor.methods({
       }
     },
     validateCaptcha: function(captchaData){
+      if (!Meteor.settings.private.recaptcha) {
+        return true;
+      }
       var self = this;
       var ip = self.connection.clientAddress;
       var verifyCaptchaResponse = reCAPTCHA.verifyCaptcha(ip, captchaData);
