@@ -1,4 +1,20 @@
-{
+version: "3"
+
+services:
+  mongo:
+    image: mongo
+
+  apisio:
+    build: .
+    depends_on: 
+    - mongo
+    ports:
+    - "8080:8080"
+    environment: 
+    - "MONGO_URL=mongodb://mongo:27017/apisio"
+    - "PORT=8080"
+    - "ROOT_URL=http://localhost:8080"
+    - 'METEOR_SETTINGS={
 	"public": {
 		"specVersions": [
 			"0.14"
@@ -9,23 +25,23 @@
 		"paging": {
 			"results_per_page": 10
 		},
-		"API_PATH": "e.g. http://demo:3000/api",
+		"API_PATH": "e.g. http://localhost:8080/api",
 		"ga": {
 			"account": "YOUR_GOOGLE_ANALYTICS_ID"
 		}
 	},
 	"private": {
-		"keen": {
+		"#keen": {
 			"projectId": "YOUR_KEEN_PROJECTID",
 			"writeKey": "YOUR_KEEN_WRITEKEY"
 		},
-		"recaptcha": {
+		"#recaptcha": {
 			"privateKey": "YOUR_RECAPTCHA_PRIVATEKEY"
 		},
-		"threeScale": {
+		"#threeScale": {
 			"app_id": "YOUR_3SCALE_API_ID",
 			"app_key": "YOUR_3SCALE_API_KEY",
 			"provider_key": "YOUR_3SCALE_PROVIDER_KEY"
 		}
 	}
-}
+}'

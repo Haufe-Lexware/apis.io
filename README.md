@@ -20,6 +20,29 @@ This project is build using [Meteor](http://meteor.com). Meteor is a framework  
 
 You will now have one API listed from one Maintainer.
 
+## Starting your own API Search service as a Docker container (on Linux)
+
+1. Build the Docker image with 
+
+        docker build -t apisio .
+
+2. Start a mongo database with
+  
+        docker run --rm -p "27017:27017" mongo
+
+3. Start the apisio image with
+  
+        docker run --rm -it -e "METEOR_SETTINGS=$(cat settings.json)" -e "MONGO_URL=mongodb://172.17.0.1:27017/test" -p 8080:8080 apisio
+
+## Starting your own API Search service with Docker compose
+This is much easier, because building and starting the apisio image is done automatically as well as connecting it to a mongo database.
+
+Just check the METEOR_SETTINGS variable in the docker-compose. It should contain the same info as to be found in settings.json.
+
+        docker-compose up
+
+Simply run `docker-compose up --build`, wait some time and go to `http://localhost:8080`. The docker-compose 
+
 ## Deploy
 To deploy your own version of APIs.io is very easy, they are several platform to host Meteor apps.
 ### On Scalingo

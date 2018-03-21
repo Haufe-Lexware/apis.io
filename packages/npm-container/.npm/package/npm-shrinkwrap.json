@@ -13,11 +13,6 @@
         }
       }
     },
-    "URIjs": {
-      "version": "1.13.1",
-      "resolved": "https://registry.npmjs.org/URIjs/-/URIjs-1.13.1.tgz",
-      "integrity": "sha1-20qD75u2/bHcoIFj15YAfAh9wOE="
-    },
     "abbrev": {
       "version": "1.1.1",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -489,9 +484,9 @@
       "integrity": "sha1-1bAWkSUzJql6K77p5hxV2NYDUeI="
     },
     "natives": {
-      "version": "1.1.1",
-      "resolved": "https://registry.npmjs.org/natives/-/natives-1.1.1.tgz",
-      "integrity": "sha512-8eRaxn8u/4wN8tGkhlc2cgwwvOLMLUMUn4IYTexMgWd+LyUDfeXVkk2ygQR0hvIHbJQXgHujia3ieUUDwNGkEA=="
+      "version": "1.1.2",
+      "resolved": "https://registry.npmjs.org/natives/-/natives-1.1.2.tgz",
+      "integrity": "sha512-5bRASydE1gu6zPOenLN043++J8xj1Ob7ArkfdYO3JN4DF5rDmG7bMoiybkTyD+GnXQEMixVeDHMzuqm6kpBmiA=="
     },
     "node-pre-gyp": {
       "version": "0.6.39",
@@ -804,6 +799,11 @@
       "version": "0.0.4",
       "resolved": "https://registry.npmjs.org/unzip/-/unzip-0.0.4.tgz",
       "integrity": "sha1-/2fKhClbZRYdXH8vNAmJx43GCVo="
+    },
+    "urijs": {
+      "version": "1.19.1",
+      "resolved": "https://registry.npmjs.org/urijs/-/urijs-1.19.1.tgz",
+      "integrity": "sha512-xVrGVi94ueCJNrBSTjWqjvtgvl3cyOTThp2zaMaFNGp3F542TR6sM3f2o8RqZl+AwteClSVmoCyt0ka4RjQOQg=="
     },
     "util-deprecate": {
       "version": "1.0.2",

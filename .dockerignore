@@ -1,7 +1,7 @@
 .meteor/local
 .meteor/meteorite
+.DS_Store
 node_modules
 settings.json
-.DS_Store
 notes.md
 npm-debug.log
